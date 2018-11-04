@@ -47,13 +47,20 @@ body {
     color: white;
 }
 
-/* Style the content */
+/* Style the title-page */
 .bigtitle{
     background-color: #ddd;
     background-image: url("../assets/background.jpg");
     text-align: center;
     padding: 120px;
     color: white;
+}
+
+#about-content {
+    background-color: white;
+    padding: 25px;
+    text-align: justify;
+    height: 610px;
 }
 
 /* Style the footer */
