@@ -11,7 +11,23 @@ body {
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #00bfff
+}
+
+/* Multi-use Gradient */
+#grad1 {
+  background-image: linear-gradient(#00bfff, #6495ed);
+}
+
+/* Background Image */
+#background-image{
+  background-image: url("../assets/background-3.jpg"); /* The image used */
+  background-color: #ddd;; /* Used if the image is unavailable */
+  height: 660px; /* You must set a specified height */
+  width: 1540px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 /* Style the topnav links */
@@ -27,18 +43,24 @@ body {
 /* Change color on hover */
 .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    background-image: linear-gradient(#87cefa, #00bfff);
+    color: white;
 }
 
 /* Style the content */
-.content {
+.bigtitle{
     background-color: #ddd;
-    padding: 10px;
-    height: 200px; /* Should be removed. Only for demonstration */
+    background-image: url("../assets/background.jpg");
+    text-align: center;
+    padding: 120px;
+    color: white;
 }
 
 /* Style the footer */
 .footer {
     background-color: #f1f1f1;
-    padding: 10px;
+    background-image: linear-gradient(#00bfff, #87cefa);
+    text-align: center;
+    color: white;
+    padding: 8px;
 }
