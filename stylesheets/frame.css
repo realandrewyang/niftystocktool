@@ -23,8 +23,8 @@ body {
 #background-image{
   background-image: url("../assets/background-3.jpg"); /* The image used */
   background-color: #ddd;; /* Used if the image is unavailable */
-  height: 660px; /* You must set a specified height */
-  width: 1540px;
+  height: 680px; /* You must set a specified height */
+  width: 1518px;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
