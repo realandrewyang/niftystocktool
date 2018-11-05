@@ -6,7 +6,7 @@ function getUserTickerSearch(){
   if (ticker.value == ""){
     tickerDisplay.innerHTML = "Ticker: None Selected";
   } else {
-    tickerDisplay.innerHTML = "Ticker: " + ticker.value;
+    tickerDisplay.innerHTML = "Ticker: " + ticker.value.toUpperCase();
   }
   ticker.value = "";
   return null;
