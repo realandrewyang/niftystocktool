@@ -16,6 +16,9 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon.jpg" type="image/x-icon"/>
 
+  <!-- Scripts -->
+  <script type="text/javascript" src="scripts/interactive.js"></script>
+
 </head>
 
 <body>
@@ -25,13 +28,20 @@
     <a href="search.html">Search</a>
     <a href="top-picks.html">Top Picks</a>
     <a href="about.html">About</a>
-    <input type="text" placeholder="Search Stock Ticker">
+    <input type="submit" onclick="getUserTickerSearch()">
+    <input type="text" id="tickerSearch" placeholder="Search Stock Ticker">
   </div>
 
   <div id="about-content">
     <h1>Enter a ticker symbol into the search bar to find a stock.</h1>
     <p>Please note that the Nifty Stock Tool is currently limited to the NYSE and NASDAQ markets.</p>
+
+    <br><hr><br>
+    <div>
+      <h1 id="tickerDisplay">Ticker: None Selected</h1>
+    </div>
   </div>
+
 
   <div class="footer">
     <p>Copyright Andrew Yang 2018.</p>
