@@ -1,4 +1,4 @@
 # niftystocktool
 A real-time stock evaluation tool
 
-# Projection currently under construction
+# Project currently under construction
