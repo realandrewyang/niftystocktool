@@ -17,6 +17,7 @@
   <link rel="icon" href="assets/favicon.jpg" type="image/x-icon"/>
 
   <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="scripts/interactive.js"></script>
 
 </head>
@@ -28,17 +29,40 @@
     <a href="search.html">Search</a>
     <a href="top-picks.html">Top Picks</a>
     <a href="about.html">About</a>
-    <input type="submit" onclick="getUserTickerSearch()">
+    <input type="submit" onclick="callAPI('')">
     <input type="text" id="tickerSearch" placeholder="Search Stock Ticker">
   </div>
 
   <div id="about-content">
     <h1>Enter a ticker symbol into the search bar to find a stock.</h1>
-    <p>Please note that the Nifty Stock Tool is currently limited to the NYSE and NASDAQ markets.</p>
+    <p>Please note that the Nifty Stock Tool is currently limited to stocks trading on the NASDAQ or NYSE.</p>
 
-    <br><hr><br>
-    <div>
-      <h1 id="tickerDisplay">Ticker: None Selected</h1>
+    <hr>
+    <div class="stock-card">
+      <h2 id="tickerDisplay"></h2>
+      <h2 id="companyDisplay"></h2>
+      <table class="small-table">
+        <tr>
+          <td id="openLabel">Open</td>
+          <td id="openValue"></td>
+        </tr>
+        <tr>
+          <td id="highLabel">High</td>
+          <td id="highValue"></td>
+        </tr>
+        <tr>
+          <td id="lowLabel">Low</td>
+          <td id="lowValue"></td>
+        </tr>
+        <tr>
+          <td id="closeLabel">Close</td>
+          <td id="closeValue"></td>
+        </tr>
+        <tr>
+          <td id="volumeLabel">Volume</td>
+          <td id="volumeValue"></td>
+        </tr>
+      </table>
     </div>
   </div>
 

@@ -8,6 +8,31 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.stock-card {
+  margin-left: 20px;
+}
+
+.stock-card table {
+  border-width: medium;
+  border-style: solid;
+  spacing: 20px;
+}
+
+.stock-card h2 {
+  height: 20px;
+  padding: 0px;
+  margin: 20px;
+}
+
+td, th {
+  width: 150px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: justify;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
@@ -47,6 +72,7 @@ body {
     padding: 25px;
     text-align: justify;
     height: 610px;
+    width: 700px;
 }
 
 /* Style the topnav links */
