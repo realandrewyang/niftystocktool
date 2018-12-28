@@ -40,7 +40,7 @@ function callAPI(key){
 
   if (ticker){
 
-    $.getJSON("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + ticker + "&interval=1min&apikey=" + key).done(function (obj){
+    $.getJSON("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=" + ticker + "&interval=1min&apikey=" + key).done(function (obj){
 
       if (obj["Error Message"]){
         alert("Sorry, we couldn't find this stock ticker. Please try another one.");
@@ -55,13 +55,14 @@ function callAPI(key){
           document.getElementById("companyDisplay").innerHTML = tickerList[ticker];
         }
 
-        var data = $.map(obj["Time Series (1min)"], function(a) { return a });
+        var data = obj["Global Quote"];
+        console.log(data);
 
-        updateMultipleTags({"openValue": data[0]["1. open"],
-                            "highValue": data[0]["2. high"],
-                            "lowValue": data[0]["3. low"],
-                            "closeValue": data[0]["4. close"],
-                            "volumeValue": data[0]["5. volume"]});
+        updateMultipleTags({"openValue": data["02. open"],
+                            "highValue": data["03. high"],
+                            "lowValue": data["04. low"],
+                            "priceValue": data["05. price"],
+                            "volumeValue": data["06. volume"]});
         return null;
       }
     });
