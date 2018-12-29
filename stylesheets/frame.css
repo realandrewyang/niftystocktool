@@ -59,7 +59,7 @@ td, th {
 }
 
 /* Style the title-page */
-.bigtitle{
+.bigtitle {
     background-color: #ddd;
     background-image: url("../assets/background.jpg");
     text-align: center;
@@ -67,12 +67,22 @@ td, th {
     color: white;
 }
 
+/* Style the content container */
+.content-grid {
+  display: grid;
+  grid-template-columns: 55% auto;
+  background-color: #ffffff;
+  height: 610px;
+  margin: 0px;
+  padding: 0px;
+}
+
 #about-content {
     background-color: white;
     padding: 25px;
     text-align: justify;
     height: 610px;
-    width: 700px;
+    width: 650px;
 }
 
 /* Style the topnav links */

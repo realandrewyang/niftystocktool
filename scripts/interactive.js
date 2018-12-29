@@ -1,17 +1,40 @@
 var apiKey = "DFQTOSESTP9UI9GX";
 var tickerList = "";
 
+// Load the list of tickers
 $.getJSON("./tickers.json").done(function (obj){
   tickerList = obj;
-  console.log(tickerList);
+  // console.log(tickerList);
 });
 
-console.log(tickerList);
+// This function instantiates the graph on the Search page
+function setUpGraph(id){
+  var ctx = document.getElementById(id);
+  var myChart = new Chart(ctx, {
+      type: 'line',
+      options: {
+          title: {
+            display: true,
+            text: "Time Series (This Graph is a Placeholder)"
+          },
+          scales: {
+              yAxes: [{
+                  ticks: {
 
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+});
+}
+
+// This function retrieves the inputted ticker
 function getUserTickerSearch(){
   return document.getElementById("tickerSearch").value;
 }
 
+// Tests the AlphaVantage API
 function testAlphaVantageAPI(key){
   $.getJSON("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=" + key).done(function (obj){
     console.log(JSON.stringify(obj));
@@ -19,6 +42,7 @@ function testAlphaVantageAPI(key){
   return null;
 }
 
+// Updates multiple HTML text tags by id
 function updateMultipleTags(dict){
   for (id in dict){
     if (!document.getElementById(id)){
@@ -31,6 +55,7 @@ function updateMultipleTags(dict){
   return null;
 }
 
+// Calls the API and produces the necessary information for the "Search" Page
 function callAPI(key){
   if (key == ''){
     key = apiKey;

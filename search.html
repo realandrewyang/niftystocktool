@@ -18,6 +18,10 @@
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script type="text/javascript" src="scripts/interactive.js"></script>
 
 </head>
@@ -33,39 +37,47 @@
     <input type="text" id="tickerSearch" placeholder="Search Stock Ticker">
   </div>
 
-  <div id="about-content">
-    <h1>Enter a ticker symbol into the search bar to find a stock.</h1>
-    <p>Please note that the Nifty Stock Tool is currently limited to stocks trading on the NASDAQ or NYSE.</p>
+  <div class="content-grid">
+    <div id="about-content">
+      <h1>Enter a ticker symbol into the search bar to find a stock.</h1>
+      <p>Please note that the Nifty Stock Tool is currently limited to stocks trading on the NASDAQ or NYSE.</p>
 
-    <hr>
-    <div class="stock-card">
-      <h2 id="tickerDisplay"></h2>
-      <h2 id="companyDisplay"></h2>
-      <table class="small-table">
-        <tr>
-          <td id="openLabel">Open</td>
-          <td id="openValue"></td>
-        </tr>
-        <tr>
-          <td id="highLabel">High</td>
-          <td id="highValue"></td>
-        </tr>
-        <tr>
-          <td id="lowLabel">Low</td>
-          <td id="lowValue"></td>
-        </tr>
-        <tr>
-          <td id="priceLabel">Price</td>
-          <td id="priceValue"></td>
-        </tr>
-        <tr>
-          <td id="volumeLabel">Volume</td>
-          <td id="volumeValue"></td>
-        </tr>
-      </table>
+      <hr>
+      <div class="stock-card">
+        <h2 id="tickerDisplay"></h2>
+        <h2 id="companyDisplay"></h2>
+        <table class="small-table">
+          <tr>
+            <td id="openLabel">Open</td>
+            <td id="openValue"></td>
+          </tr>
+          <tr>
+            <td id="highLabel">High</td>
+            <td id="highValue"></td>
+          </tr>
+          <tr>
+            <td id="lowLabel">Low</td>
+            <td id="lowValue"></td>
+          </tr>
+          <tr>
+            <td id="priceLabel">Price</td>
+            <td id="priceValue"></td>
+          </tr>
+          <tr>
+            <td id="volumeLabel">Volume</td>
+            <td id="volumeValue"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="about-content" style="width: 600px">
+      <canvas id="detailed-graph" width="400" height="400" textBaseline="bottom"></canvas>
+      <script type="text/javascript">
+        setUpGraph("detailed-graph");
+      </script>
     </div>
   </div>
-
 
   <div class="footer">
     <p>Copyright &copy; Andrew Yang 2018.</p>
