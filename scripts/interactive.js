@@ -67,7 +67,7 @@ function callAPI(key){
 
     $.getJSON("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=" + ticker + "&interval=1min&apikey=" + key).done(function (obj){
 
-      if (obj["Error Message"]){
+      if (jQuery.isEmptyObject(obj["Global Quote"])){
         alert("Sorry, we couldn't find this stock ticker. Please try another one.");
         return -1;
 
