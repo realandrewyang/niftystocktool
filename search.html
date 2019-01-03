@@ -33,7 +33,7 @@
     <a href="search.html">Search</a>
     <a href="top-picks.html">Top Picks</a>
     <a href="about.html">About</a>
-    <input type="submit" onclick="callAPI('')">
+    <input type="submit" onclick="getTickerInfo('')">
     <input type="text" id="tickerSearch" placeholder="Search Stock Ticker">
   </div>
 
@@ -71,10 +71,19 @@
       </div>
     </div>
 
-    <div id="about-content" style="width: 600px">
-      <canvas id="detailed-graph" width="400" height="400" textBaseline="bottom"></canvas>
+    <div class="stock-card" id="about-content">
+      <!-- <canvas id="detailed-graph" width="400" height="400" textBaseline="bottom"></canvas>
+      <script type="text/javascript">
+        var testData = [{x: 10, y: 20}, {x: 20, y: 10}];
+        setUpGraph("detailed-graph");
+        // loadTimeSeriesGraph(myChart, testData, "MSFT", "Microsoft" )
+      </script> -->
+      <h1 id="recommendationLabel" style="text-decoration: underline;">Nifty Recommendation</h2>
+      <h2 id="recommendation"></h2>
+      <canvas id="detailed-graph" textBaseline="bottom"></canvas>
       <script type="text/javascript">
         setUpGraph("detailed-graph");
+        // loadTimeSeriesGraph(myChart, [], "MSFT", "Microsoft");
       </script>
     </div>
   </div>
