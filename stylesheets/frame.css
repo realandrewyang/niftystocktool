@@ -51,8 +51,8 @@ td, th {
 #background-image{
   background-image: url("../assets/background-3.jpg"); /* The image used */
   background-color: #ddd;; /* Used if the image is unavailable */
-  height: 680px; /* You must set a specified height */
-  width: 1518px;
+  height: 100vh; /* You must set a specified height */
+  width: 100%;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -72,7 +72,7 @@ td, th {
   display: grid;
   grid-template-columns: 55% auto;
   background-color: #ffffff;
-  height: 610px;
+  height: calc(100vh - 112px);
   margin: 0px;
   padding: 0px;
 }
@@ -81,7 +81,7 @@ td, th {
     background-color: white;
     padding: 25px;
     text-align: justify;
-    height: 610px;
+    height: calc(100vh - 112px);
     width: 650px;
 }
 
